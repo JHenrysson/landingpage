@@ -44,7 +44,7 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" data-target="#contact" data-toggle="modal" >Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gallery.html">Gallery</a>
@@ -68,8 +68,9 @@
                 <button class="btn btn-primary" data-target="#signup" data-toggle="modal" type="button">
                     Sign Up
                 </button>
+            </p>
 
-                <!-- Modal -->
+            <!-- Modal -->
             <div aria-hidden="true" aria-labelledby="signup1" class="modal fade" id="signup"
                  role="dialog" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -147,45 +148,53 @@
             <h1>About me</h1>
             <div class="container">
                 <p>This is where information about me goes ....... </p>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="well well-sm">
-                            <form class="form-horizontal" action="" method="post">
-                                <fieldset>
-                                    <legend class="text-center">Contact Us</legend>
-                                    <!---Name input-->
+            </div>
+        </div>
+        <div aria-hidden="true" aria-labelledby="contact" class="modal fade" id="contact"
+             role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contact2">Modal title</h5>
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="" method="post">
+                            <fieldset>
+                                <legend class="text-center">Contact Us</legend>
+                                <!---Name input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control label" for="name">Name </label>
+                                    <div class="col-md-9">
+                                        <input id="name" name="name" type="text" placeholder="Your name"
+                                               class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Email Input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="email">Email</label>
+                                    <div class="col-md-9">
+                                        <input id="email" name="email" type="text" placeholder="Your Email"
+                                               class="form-control">
+                                    </div>
+                                    <!-- message body-->
                                     <div class="form-group">
-                                        <label class="col-md-3 control label" for="name">Name </label>
+                                        <label class="col-md-3 control-label" for="message">Your Message</label>
                                         <div class="col-md-9">
-                                            <input id="name" name="name" type="text" placeholder="Your name"
-                                                   class="form-control">
+                                                <textarea class="form-control" id="message" placeholder="Enter message here"
+                                                          rows="5"></textarea>
                                         </div>
                                     </div>
-                                    <!-- Email Input-->
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="email">Email</label>
-                                        <div class="col-md-9">
-                                            <input id="email" name="email" type="text" placeholder="Your Email"
-                                                   class="form-control">
-                                        </div>
-                                        <!-- message body-->
-                                        <div class="form-group">
-                                            <label class="col-md-3 control-label" for="message">Your Message</label>
-                                            <div class="col-md-9">
-                                            <textarea class="form-control" id="message" placeholder="Enter message here"
-                                                      rows="5"></textarea>
-                                            </div>
-                                            <!-- Form Actions--->
-                                            <div class="form-group">
-                                                <div class="col-md-12 text-right">
-                                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        <button class="btn btn-primary" type="button">Submit</button>
                     </div>
                 </div>
             </div>
