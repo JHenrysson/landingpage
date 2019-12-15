@@ -17,6 +17,8 @@
     <script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+    <script src="index.js"></script>
+
     <title>Welcome</title>
 </head>
 <body>
@@ -26,17 +28,6 @@
             data-target="#navbarNav" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="dropdown">
-        <button aria-expanded="false" aria-haspopup="true" class="btn btn-secondary dropdown-toggle"
-                data-toggle="dropdown" id="dropdownMenuButton" type="button">
-            Contents
-        </button>
-        <div aria-labelledby="dropdownMenuButton" class="dropdown-menu">
-            <a class="dropdown-item" href="about.html">About</a>
-            <a class="dropdown-item" href="gallery.html">Gallery</a>
-            <a class="dropdown-item" href="contact.html">Contact</a>
-        </div>
-    </div>
 
     <nav class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -81,9 +72,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
-                    <div class="modal-body">
-                        <form>
+                    <form onsubmit="return signUp()">
+                        <div class="modal-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1"
@@ -101,13 +91,13 @@
                                 <input class="form-control" id="exampleInputPassword2" placeholder="Password"
                                        type="password">
                             </div>
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                        <button class="btn btn-primary" type="button">Submit</button>
-                    </div>
+                            <span id='passwordError' style="color: red; visibility: hidden">The passwords does not match</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -179,9 +169,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
-                <div class="modal-body">
-                    <form class="form-horizontal" action="" method="post">
+                <form class="form-horizontal" method="post">
+                    <div class="modal-body">
                         <fieldset>
                             <legend class="text-center">Contact Us</legend>
                             <!---Name input-->
@@ -196,7 +185,7 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="email">Email</label>
                                 <div class="col-md-9">
-                                    <input id="email" name="email" type="text" placeholder="Your Email"
+                                    <input id="email" name="email" type="email" placeholder="Your Email"
                                            class="form-control">
                                 </div>
                                 <!-- message body-->
@@ -210,12 +199,12 @@
                                 </div>
                             </div>
                         </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                    <button class="btn btn-primary" type="button">Submit</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
